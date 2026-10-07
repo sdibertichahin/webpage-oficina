@@ -1,0 +1,84 @@
+{
+    "estadisticas": [
+        {
+            "numero": "+5",
+            "texto": "áreas de práctica"
+        },
+        {
+            "numero": "+25",
+            "texto": "años de experiencia"
+        },
+        {
+            "numero": "+100",
+            "texto": "clientes asesorados"
+        }
+    ],
+
+    "enfoque": [
+        {
+            "titulo": "Escuchamos",
+            "descripcion": "Entendemos cada situación antes de definir una estrategia."
+        },
+        {
+            "titulo": "Analizamos",
+            "descripcion": "Estudiamos cada caso desde una mirada integral."
+        },
+        {
+            "titulo": "Acompañamos",
+            "descripcion": "Mantenemos una comunicación cercana durante todo el proceso."
+        }
+    ],
+
+
+    "servicios": [
+        {
+            "nombre": "Civil",
+            "icono": "imagenes/civil.svg",
+            "descripcion": "Asesoramiento y representación en conflictos civiles, contratos, daños, sucesiones y cuestiones patrimoniales."
+        },
+        {
+            "nombre": "Laboral",
+            "icono": "imagenes/laboral.svg",
+            "descripcion": "Asesoramiento y representación en conflictos laborales y cuestiones vinculadas al trabajo."
+        },
+        {
+            "nombre": "Comercial",
+            "icono": "imagenes/comercial.svg",
+            "descripcion": "Asistencia jurídica para empresas, comercios y profesionales en sus relaciones y operaciones comerciales."
+        },
+        {
+            "nombre": "Familia",
+            "icono": "imagenes/familiar.svg",
+            "descripcion": "Acompañamiento y asesoramiento en cuestiones vinculadas al derecho de familia."
+        },
+        {
+            "nombre": "Previsional",
+            "icono": "imagenes/provisional.svg",
+            "descripcion": "Asesoramiento en jubilaciones, pensiones y demás cuestiones vinculadas al régimen previsional."
+        }
+    ],
+
+    "equipo": [
+    {
+        "nombre": "Graciela Monia Chahin",
+        "cargo": "Abogada",
+        "descripcion": "Especialista en [área]. Cuenta con más de X años de trayectoria profesional, desarrollando su práctica principalmente en [áreas].",
+        "imagen": "imagenes/monia.png"
+    },
+    {
+        "nombre": "Badia Estefanía Chahin",
+        "cargo": "Abogada",
+        "descripcion": "Especialista en [área]. Cuenta con más de X años de trayectoria profesional, desarrollando su práctica principalmente en [áreas].",
+        "imagen": "imagenes/monia.png"
+    }
+    ],
+
+    "casos": [
+        {
+            "titulo": "Derecho civil - <em>2020</em>",
+            "descripcion": "Una breve explicación de dos o tres líneas sobre la intervención del estudio y la relevancia del caso.",
+            "video": "https://www.youtube.com/embed/EBQV4rdzxS0"
+        }
+    ]
+
+}

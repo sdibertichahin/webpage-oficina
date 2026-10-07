@@ -1,0 +1,1563 @@
+/* =========================
+   TIPOGRAFÍAS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+:root {
+    /* COLORES */
+    --verde: #1F4448;
+    --blanco: #E1E1E2;
+    --naranja: #C15925;
+    --beige: #D2CBB9;
+    --fondo: #FFFFFF;
+    --oscuro-azul: #202023;
+
+    /* GRILLA */
+    --margen: 100px;
+    --gutter: 20px;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--oscuro-azul);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: "Crimson Text", serif;
+    font-size: 100px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Crimson Text", serif;
+    font-size: 48px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    font-style: normal;
+}
+
+p {
+    line-height: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section {
+    padding-left: var(--margen);
+    padding-right: var(--margen);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+header {
+    width: 100%;
+    height: 138px;
+
+    padding: 0 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(
+        90deg,
+        #1F4448 0%,
+        #202023 100%
+    );
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+.logo img {
+    width: 220px;
+    height: auto;
+    display: block;
+}
+
+
+/* NAVEGACIÓN */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.nav-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+
+    color: #E1E1E2;
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+
+    z-index: 1;
+}
+
+
+/* BOTÓN ACTIVO */
+
+.nav-link.activo::before {
+    opacity: 1;
+}
+
+
+nav {
+    display: flex;
+    gap: 45px;
+}
+
+nav a {
+    color: #E1E1E2;
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--naranja);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background-color: var(--fondo);
+}
+
+
+/* GRILLA DE 12 COLUMNAS */
+
+.hero-contenido {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--gutter);
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.hero-texto {
+    grid-column: 1 / 7;
+}
+
+
+/* TÍTULO */
+
+.hero h1 {
+    margin: 0 0 90px 0;
+
+    font-family: "Crimson Text", serif;
+    font-size: 92px;
+    font-weight: 400;
+    font-style: normal;
+
+    line-height: 130px;
+
+    color: var(--oscuro-azul);
+}
+
+
+/* ESTUDIO CHAHIN */
+
+.hero h1 em {
+    display: block;
+
+    color: var(--verde);
+
+    font-weight: 400;
+    font-style: italic;
+
+    white-space: nowrap;
+}
+
+
+/* BAJADA */
+
+.hero h3 {
+    margin: 0 0 22px 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 36px;
+    font-style: normal;
+
+    line-height: 1.4;
+
+    color: var(--naranja);
+}
+
+
+/* TEXTO */
+
+.hero p {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+
+    line-height: 30px;
+
+    color: var(--oscuro-azul);
+}
+
+
+/* =========================
+   IMÁGENES
+========================= */
+
+.hero-imagenes {
+    grid-column: 7 / 13;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    align-items: flex-start;
+}
+
+
+/* PLACEHOLDERS */
+
+.placeholder {
+    background-color: var(--beige);
+}
+
+
+/* IMAGEN SUPERIOR */
+
+.hero-img-grande {
+    width: 100%;
+    height: 320px;
+}
+
+
+/* IMAGEN INFERIOR */
+
+.hero-img-chica {
+    width: 75%;
+    height: 320px;
+}
+
+
+/* =========================
+   LÍNEA INFERIOR
+========================= */
+
+.hero-linea {
+    grid-column: 1 / 13;
+
+    width: 100%;
+
+    margin-top: 150px;
+    margin-bottom: 0;
+
+    border: 0;
+    border-top: 1px solid var(--beige);
+}
+
+/* =========================
+   NOSOTROS
+========================= */
+
+.nosotros {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background-color: var(--fondo);
+}
+
+.nosotros-contenido {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--gutter);
+}
+
+
+/* TÍTULO */
+
+.nosotros h2 {
+    grid-column: 1 / 13;
+
+    margin: 0 0 40px 0;
+
+    font-family: "Crimson Text", serif;
+    font-size: 48px;
+    font-weight: 600;
+
+    color: var(--verde);
+}
+
+.nosotros-texto {
+    grid-column: 1 / 7;
+}
+
+.nosotros-texto p {
+    margin: 0 0 25px 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    color: var(--oscuro-azul);
+}
+
+.nosotros-texto p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ESTADÍSTICAS */
+
+.estadisticas {
+    grid-column: 7 / 13;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+
+    align-self: start;
+}
+
+.estadistica {
+    text-align: center;
+}
+
+.estadistica span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-family: "Crimson Text", serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+
+    color: var(--naranja);
+
+    border: 0;
+    padding: 0;
+}
+
+.estadistica p {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+
+    color: var(--oscuro-azul);
+}
+
+/* ENFOQUE */
+
+.enfoque {
+    grid-column: 1 / 13;
+
+    margin-top: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-radius: 20px;
+
+    background: rgba(210,203,185, 0.25);
+
+    box-shadow:
+        0 8px 20px rgba(32, 32, 35, 0.15);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    overflow: hidden;
+}
+
+.enfoque-item {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 45px 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.enfoque-item h3 {
+    margin: 0 0 8px 0;
+
+    font-family: "Crimson Text", serif;
+    font-size: 32px;
+    font-weight: 600;
+
+    color: var(--oscuro-azul);
+}
+
+.enfoque-item p {
+    margin: 0;
+
+    max-width: 300px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
+    color: var(--oscuro-azul);
+}
+
+.enfoque-item:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    top: 20%;
+
+    width: 3px;
+    height: 60%;
+
+    background-color: var(--beige);
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.servicios {
+    /* Cancela los 100px laterales del section general */
+    padding-left: 0;
+    padding-right: 0;
+
+    padding-top: 55px;
+    padding-bottom: 130px;
+
+    background-color: var(--oscuro-azul);
+    color: var(--blanco);
+
+    /* Sombra que marca el final de Servicios */
+    position: relative;
+    z-index: 2;
+
+    box-shadow:
+        0 18px 30px rgba(0, 0, 0, 0.28);
+}
+
+
+/* CONTENIDO INTERNO */
+
+.servicios-contenido {
+    margin-left: var(--margen);
+    margin-right: var(--margen);
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.servicios-titulo {
+    text-align: center;
+
+    max-width: 600px;
+
+    margin: 0 auto 65px;
+}
+
+
+.servicios-titulo h2 {
+    margin: 0 0 10px 0;
+
+    font-family: "Crimson Text", serif;
+    font-size: 48px;
+    font-weight: 600;
+
+    color: var(--verde);
+}
+
+
+.servicios-titulo p {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+
+    color: var(--blanco);
+}
+
+
+/* =========================
+   GRILLA DE TARJETAS
+========================= */
+
+.servicios-grid {
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    column-gap: 20px;
+    row-gap: 30px;
+
+    width: 100%;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.servicio {
+    min-height: 265px;
+
+    padding: 35px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    /* GLASS */
+    background: linear-gradient(
+        45deg,
+        rgb(31, 68, 72, 0.25) 0%,
+        rgb(32, 32, 35, 0.25) 100%
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* BORDE */
+    border: 1px solid rgba(225, 225, 226, 0.30);
+
+    border-radius: 18px;
+
+    /* SHADOW */
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+
+/* PRIMERA FILA */
+
+.servicio:nth-child(1),
+.servicio:nth-child(2),
+.servicio:nth-child(3) {
+    grid-column: span 2;
+}
+
+
+/* SEGUNDA FILA */
+
+.servicio:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.servicio:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+
+/* =========================
+   ICONOS
+========================= */
+
+.servicio-icono {
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 25px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   TEXTOS DE TARJETAS
+========================= */
+
+.servicio h3 {
+    margin: 0 0 10px 0;
+
+    font-family: "Crimson Text", serif;
+    font-size: 32px;
+    font-weight: 600;
+
+    color: var(--blanco);
+}
+
+
+.servicio p {
+    margin: 0;
+
+    max-width: 310px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+
+    color: var(--blanco);
+}
+
+/* =========================
+   EQUIPO 
+========================= */
+
+.equipo {
+    padding-left: 0;
+    padding-right: 0;
+
+    padding-top: 55px;
+    padding-bottom: 130px;
+
+    background-color: var(--oscuro-azul);
+    color: var(--blanco);
+
+   /* SOMBRA AL FINAL DE LA SECCIÓN */
+    position: relative;
+    z-index: 2;
+
+    box-shadow:
+        0 18px 30px rgba(0, 0, 0, 0.28);
+}
+
+
+/* CONTENIDO */
+
+.equipo-contenido {
+    margin-left: var(--margen);
+    margin-right: var(--margen);
+}
+
+
+/* TÍTULO */
+
+.equipo-titulo {
+    margin: 0 0 60px 0;
+
+    text-align: center;
+
+    font-family: "Crimson Text", serif;
+    font-size: 48px;
+    font-weight: 400;
+    font-style: normal;
+
+    color: var(--blanco);
+}
+
+/* STAFF EN VERDE E ITALIC */
+
+.equipo-titulo em {
+    color: var(--verde);
+
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* =========================
+   CONTENEDOR DE PERSONAS
+========================= */
+
+.equipo-grid {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+/* CADA PERSONA */
+
+.persona {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 0;
+
+    height: 280px;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.persona-img {
+    width: 100%;
+    height: 280px;
+
+    overflow: hidden;
+
+    background-color: var(--blanco);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+
+/* IMAGEN REAL */
+
+.persona-img img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   TARJETA DE INFORMACIÓN
+========================= */
+
+.persona-info {
+    height: 280px;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: rgba(210, 203, 185, 0.25);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(225, 225, 226, 0.25);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================
+   POSICIÓN DE PERSONAS
+========================= */
+
+
+/* PRIMERA PERSONA */
+
+.persona:not(.invertida) .persona-img {
+    grid-column: 1 / 4;
+}
+
+.persona:not(.invertida) .persona-info {
+    grid-column: 4 / 9;
+}
+
+
+/* SEGUNDA PERSONA */
+
+.persona.invertida .persona-info {
+    grid-column: 5 / 10;
+    grid-row: 1;
+}
+
+.persona.invertida .persona-img {
+    grid-column: 10 / 13;
+    grid-row: 1;
+}
+
+/* =========================
+   TEXTOS
+========================= */
+
+.persona-info h3 {
+    margin: 0 0 5px 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+
+    color: var(--blanco);
+}
+
+
+.persona-info h4 {
+    margin: 0 0 15px 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+
+    color: var(--blanco);
+}
+
+
+.persona-info p {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+
+    color: var(--blanco);
+}
+
+/* =========================
+   RADIOS STAFF
+========================= */
+
+
+/* PRIMERA PERSONA */
+
+/* Foto: redondeada solamente del lado izquierdo */
+.persona:not(.invertida) .persona-img {
+    border-radius: 18px 0 0 18px;
+}
+
+/* Tarjeta: redondeada solamente del lado derecho */
+.persona:not(.invertida) .persona-info {
+    border-radius: 0 18px 18px 0;
+}
+
+
+/* SEGUNDA PERSONA */
+
+/* Tarjeta: ahora está a la izquierda */
+.persona.invertida .persona-info {
+    border-radius: 18px 0 0 18px;
+}
+
+/* Foto: ahora está a la derecha */
+.persona.invertida .persona-img {
+    border-radius: 0 18px 18px 0;
+}
+
+/* =========================
+   CASOS + OPINIONES
+========================= */
+
+.casos {
+    padding: 50px var(--margen) 0;
+
+    background-color: var(--fondo);
+    color: var(--oscuro-azul);
+}
+
+
+/* =========================
+   TÍTULO CASOS
+========================= */
+
+.casos-titulo {
+    margin: 0 0 36px 0;
+
+    font-family: "Crimson Text", serif;
+    font-size: 48px;
+    font-weight: 600;
+
+    color: var(--verde);
+}
+
+
+/* =========================
+   CASO
+========================= */
+
+.casos-contenido {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--gutter);
+
+    margin-bottom: 50px;
+}
+
+
+/* VIDEO */
+
+.caso-video {
+    grid-column: 1 / 7;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-color: var(--beige);
+}
+
+
+.caso-video iframe {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: 0;
+}
+
+
+/* TEXTO DEL CASO */
+
+.caso-info {
+    grid-column: 8 / 13;
+
+    padding-left: 20px;
+
+    border-left: 3px solid var(--beige);
+
+    align-self: start;
+}
+
+
+.caso-info h3 {
+    margin: 0 0 15px 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    color: var(--oscuro-azul);
+}
+
+
+.caso-info p {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+
+    color: var(--oscuro-azul);
+}
+
+
+/* =========================
+   OPINIONES
+========================= */
+
+.opiniones {
+    margin-top: 20px;
+}
+
+
+/* INTRO */
+
+.opinion-texto {
+    margin-bottom: 40px;
+}
+
+
+.opinion-texto h2 {
+    margin: 0 0 20px 0;
+
+    font-family: "Crimson Text", serif;
+    font-size: 32px;
+    font-weight: 600;
+
+    color: var(--oscuro-azul);
+}
+
+
+.opinion-texto h4 {
+    margin: 0 0 5px 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    color: var(--oscuro-azul);
+}
+
+
+.opinion-texto h4 em {
+    font-style: italic;
+}
+
+
+.opinion-texto > p {
+    max-width: 520px;
+
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+
+    color: var(--oscuro-azul);
+}
+
+
+/* =========================
+   MARCO GRANDE
+========================= */
+
+.opinion-marco {
+    min-height: 160px;
+
+    padding: 25px 45px;
+
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--gutter);
+
+    align-items: center;
+
+    box-sizing: border-box;
+
+    border-radius: 20px;
+
+    /* GLASS */
+    background: rgba(210, 203, 185, 0.25);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(210, 203, 185, 0.30);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   GOOGLE
+========================= */
+
+.google {
+    grid-column: 1 / 6;
+}
+
+
+.estrellas {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    line-height: 1;
+
+    letter-spacing: 3px;
+
+    color: var(--oscuro-azul);
+}
+
+
+.google-puntuacion {
+    margin: 6px 0 12px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+/* BOTÓN */
+
+.boton-google {
+    width: fit-content;
+
+    padding: 7px 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 20px;
+
+    background-color: var(--naranja);
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    color: var(--blanco);
+    text-decoration: none;
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.20);
+
+    transition: 0.25s;
+}
+
+
+.boton-google:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   RESEÑA
+========================= */
+
+.resena {
+    grid-column: 8 / 12;
+
+    padding: 16px 30px;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+
+    background: rgba(225, 225, 226, 0.25);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(225, 225, 226, 0.40);
+
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.18);
+}
+
+
+.resena-texto {
+    margin: 0 0 7px 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.resena-estrellas {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+
+.resena-autor {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+/* =========================
+   LÍNEA FINAL
+========================= */
+
+.casos-linea {
+    width: 100%;
+
+    margin: 80px 0 0;
+
+    border: 0;
+    border-top: 1px solid var(--beige);
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    padding-top: 75px;
+    padding-bottom: 150px;
+
+    background-color: var(--fondo);
+    color: var(--oscuro-azul);
+}
+
+
+.contacto-contenido {
+    width: 100%;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.contacto-titulo {
+    max-width: 610px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.contacto-titulo h2 {
+    margin: 0 0 10px 0;
+
+    font-family: "Crimson Text", serif;
+    font-size: 48px;
+    font-weight: 600;
+
+    color: var(--verde);
+}
+
+
+.contacto-titulo p {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+
+    color: var(--oscuro-azul);
+}
+
+
+/* =========================
+   GRID CONTACTO
+========================= */
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--gutter);
+
+    align-items: center;
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.contacto-info {
+    grid-column: 1 / 6;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 70px;
+}
+
+
+.hablemos h3 {
+    margin: 0 0 18px 0;
+
+    font-family: "Crimson Text", serif;
+    font-size: 32px;
+    font-weight: 600;
+
+    color: var(--oscuro-azul);
+}
+
+
+/* EMAIL + TELÉFONO */
+
+.contacto-dato {
+    width: fit-content;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+
+    color: var(--oscuro-azul);
+    text-decoration: none;
+}
+
+
+.contacto-dato img {
+    width: 30px;
+    height: 30px;
+
+    object-fit: contain;
+}
+
+
+.contacto-dato:hover {
+    color: var(--naranja);
+}
+
+
+/* =========================
+   DIRECCIÓN
+========================= */
+
+.direccion h4 {
+    margin: 0 0 5px 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+
+    color: var(--oscuro-azul);
+}
+
+
+.direccion p {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+
+    color: var(--oscuro-azul);
+}
+
+
+.direccion .horario {
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+/* =========================
+   MAPA
+========================= */
+
+.contacto-mapa {
+    grid-column: 7 / 13;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-color: var(--beige);
+}
+
+
+.contacto-mapa iframe {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 45px var(--margen);
+
+    background-color: var(--oscuro-azul);
+}
+
+
+footer p {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+
+    color: var(--blanco);
+}
+
+
+footer strong {
+    font-weight: 600;
+}
+
+
+footer em {
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 70px 7%;
+    }
+
+
+    /* HEADER */
+
+    header {
+        padding: 0 7%;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-imagenes .placeholder:first-child {
+        height: 320px;
+    }
+
+    .hero-imagenes .placeholder:last-child {
+        height: 240px;
+    }
+
+
+    /* NOSOTROS */
+
+    .nosotros-principal {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .estadisticas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .estadistica span {
+        font-size: 40px;
+    }
+
+    .enfoque {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    /* SERVICIOS */
+
+    .servicios-grid {
+        display: block;
+    }
+
+    .servicio {
+        margin-bottom: 20px;
+    }
+
+
+    /* EQUIPO */
+
+    .persona,
+    .persona-derecha {
+        grid-template-columns: 1fr;
+
+        text-align: left;
+
+        margin-left: 0;
+    }
+
+    .persona-derecha .persona-info {
+        order: 2;
+    }
+
+    .persona-derecha .foto-persona {
+        order: 1;
+    }
+
+    .persona-derecha .persona-info p {
+        margin-left: 0;
+    }
+
+
+    /* CASOS */
+
+    .caso {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* OPINIONES */
+
+    .opiniones {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .opinion-contenido {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CONTACTO */
+
+    .contacto-contenido {
+        grid-template-columns: 1fr;
+    }
+
+}
